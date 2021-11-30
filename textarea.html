@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main {
+      width: 100vw;
+      height: 400px;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main textarea {
+      width: 500px;
+      height: 44px;
+      margin: 1rem 0;
+      resize: none;
+      text-align: left;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      outline: none;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <textarea
+        oninput="onInputHeightChange(this)"
+        placeholder="wrtie some text ehre"
+      ></textarea>
+    </div>
+  </body>
+  <script>
+      // REACT
+    // const onInputHeightChange = (e) => {
+    //     let height = e.target.style.height = "40px"
+    //     const scrollHeight = e.target.scrollHeight;
+    //     e.target.style.height = `${scrollHeight}px`
+    // };
+    const onInputHeightChange = (element) => {
+      let height = (element.style.height = "40px");
+      let styleHeight = element.scrollHeight;
+      element.style.height = `${styleHeight}px`;
+    };
+  </script>
+</html>
